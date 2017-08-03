@@ -40,7 +40,7 @@ struct ImageBaseObj {
 
 static PyObject* ImageBase_Clone(ImageBaseObj *self)
 {
-  mve::ImageBase::Ptr ptr = self->thisptr->duplicate();
+  mve::ImageBase::Ptr ptr = self->thisptr->duplicate_base();
   return ImageBase_Create(ptr);
 }
 

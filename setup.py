@@ -45,6 +45,7 @@ def extensions():
                       library_dirs = get_library_dirs(),
                       libraries = get_libraries(),
                       language = 'c++',
+                      extra_compile_args=['-std=c++11'],
                       define_macros = [('NPY_NO_DEPRECATED_API', 'NPY_1_7_API_VERSION')]
                       )]
 

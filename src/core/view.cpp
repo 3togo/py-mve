@@ -42,7 +42,7 @@ static PyObject* View_HasImage(ViewObj *self, PyObject *arg)
   if (!name)
     return NULL;
 
-  if (self->thisptr->has_image_embedding(name)) {
+  if (self->thisptr->has_blob(name)) {
     Py_RETURN_TRUE;
   }
   Py_RETURN_FALSE;
@@ -81,7 +81,7 @@ static PyObject* View_SetImage(ViewObj *self, PyObject *args)
   if (ptr == NULL)
     return NULL;
 
-  self->thisptr->set_image(name, ptr);
+  self->thisptr->set_image(ptr, name);
 
   Py_RETURN_NONE;
 }
@@ -99,7 +99,7 @@ static PyObject* View_RemoveImage(ViewObj *self, PyObject *arg)
   if (!name)
     return NULL;
 
-  self->thisptr->remove_embedding(name);
+  self->thisptr->remove_blob(name);
 
   Py_RETURN_NONE;
 }
@@ -162,7 +162,7 @@ static PyObject* View_IsValid(ViewObj *self, void* closure)
 
 static PyObject* View_GetFilename(ViewObj *self, void* closure)
 {
-  return PyString_FromString(self->thisptr->get_filename().c_str());
+  return PyString_FromString(self->thisptr->get_name().c_str());
 }
 
 static PyGetSetDef View_getset[] = {
