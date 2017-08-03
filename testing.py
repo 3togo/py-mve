@@ -13,4 +13,5 @@ def distutils_build_path():
     return join(root, 'build', distutils_dir_name())
 
 sys.path.insert(0, distutils_build_path())
+sys.path.insert(0, '/usr/local/libpng/lib')
 print(sys.path)

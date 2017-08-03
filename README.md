@@ -8,6 +8,7 @@ Python Binding for Multi-View Environment
 
 ## Status
 
+Updated to work with mve master, rev435b733, Aug 03 2017
 Usable, but still in development
 
 - Load Scene, View, CameraInfo
