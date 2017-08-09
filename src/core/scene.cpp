@@ -86,9 +86,10 @@ static int Scene_Init(SceneObj *self, PyObject *args, PyObject *kwds)
 
   if (path) {
     self->thisptr = mve::Scene::create(path);
-  } else {
-    self->thisptr = mve::Scene::create();
-  }
+  } 
+  //else {
+    //self->thisptr = mve::Scene::create();
+  //}
 
   return 0;
 }
