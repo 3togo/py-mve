@@ -29,7 +29,7 @@ if not isdir(LIB_PREFIX):
 
 def get_include_dirs():
     global LIB_PREFIX
-    return [LIB_PREFIX, numpy.get_include(),'/usr/include']
+    return [LIB_PREFIX, numpy.get_include()]
 
 def get_library_dirs():
     global LIB_PREFIX
