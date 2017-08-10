@@ -36,11 +36,7 @@ def get_library_dirs():
     return ['/usr/local/libpng/lib/', join(LIB_PREFIX, 'mve'), join(LIB_PREFIX, 'util')]
 
 def get_libraries():
-<<<<<<< HEAD
-    return ['mve', 'mve_util','png','tiff']
-=======
     return ['mve', 'util', 'tiff', 'png', 'mve_util']
->>>>>>> devel
 
 def extensions():
     return [Extension('mve.core',
