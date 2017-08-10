@@ -29,14 +29,18 @@ if not isdir(LIB_PREFIX):
 
 def get_include_dirs():
     global LIB_PREFIX
-    return [LIB_PREFIX, numpy.get_include()]
+    return [LIB_PREFIX, '/usr/local/libpng/lib/', numpy.get_include()]
 
 def get_library_dirs():
     global LIB_PREFIX
-    return [join(LIB_PREFIX, 'mve'), join(LIB_PREFIX, 'util')]
+    return ['/usr/local/libpng/lib/', join(LIB_PREFIX, 'mve'), join(LIB_PREFIX, 'util')]
 
 def get_libraries():
+<<<<<<< HEAD
     return ['mve', 'mve_util','png','tiff']
+=======
+    return ['mve', 'util', 'tiff', 'png', 'mve_util']
+>>>>>>> devel
 
 def extensions():
     return [Extension('mve.core',
@@ -45,6 +49,7 @@ def extensions():
                       library_dirs = get_library_dirs(),
                       libraries = get_libraries(),
                       language = 'c++',
+                      extra_compile_args=['-std=c++11'],
                       define_macros = [('NPY_NO_DEPRECATED_API', 'NPY_1_7_API_VERSION')]
                       )]
 

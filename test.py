@@ -3,11 +3,20 @@ import testing
 import cv2
 from mve.core import Scene, View, ImageBase
 import mve.core
+<<<<<<< HEAD
 #s = Scene('tmp/b-daman/scene')
 s = Scene()
 #s.load('tmp/b-daman/scene')
 #print(s)
 ##s.load(0)
+=======
+print 'hello'
+s = Scene('dataset')
+#s = Scene()
+s.load('dataset')
+print(s)
+#s.load(0)
+>>>>>>> devel
 
 #views = s.views
 

@@ -42,7 +42,11 @@ static PyObject* View_HasImage(ViewObj *self, PyObject *arg)
   if (!name)
     return NULL;
 
+<<<<<<< HEAD
   if (self->thisptr->has_image(name)) {
+=======
+  if (self->thisptr->has_blob(name)) {
+>>>>>>> devel
     Py_RETURN_TRUE;
   }
   Py_RETURN_FALSE;
@@ -99,7 +103,11 @@ static PyObject* View_RemoveImage(ViewObj *self, PyObject *arg)
   if (!name)
     return NULL;
 
+<<<<<<< HEAD
   self->thisptr->remove_image(name);
+=======
+  self->thisptr->remove_blob(name);
+>>>>>>> devel
 
   Py_RETURN_NONE;
 }
